@@ -8,15 +8,17 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 
 export class AppComponent {
   private greeting: string;
-  private firstValue: string ;
-  private secondValue: string ;
+  private firstValue: string;
+  private secondValue: string;
 
-  @ViewChild ('newtitle') newtitle: ElementRef;
+  @ViewChild('newtitle')
+  newtitle: ElementRef;
 
-  @ViewChild ('newlink') newlink: ElementRef;
+  @ViewChild('newlink')
+  newlink: ElementRef;
 
   constructor() {
-    this.greeting =  'A greeting value';
+    this.greeting = 'A greeting value';
   }
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
@@ -30,5 +32,9 @@ export class AppComponent {
     this.firstValue = title.value;
     this.secondValue = link.value;
     return false;
+  }
+
+  public ringWasPlaced(message: string) {
+    console.log(`Put your hands up: ${message}`);
   }
 }

@@ -20,3 +20,4 @@
     <span *ngSwitchDefault>第一个值是{{firstValue}}--default</span>
   </div>
 </form>
+<app-article-component [name]="10" (putRingOnIt)="ringWasPlaced($event)"></app-article-component>

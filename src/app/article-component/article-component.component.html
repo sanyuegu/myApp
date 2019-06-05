@@ -1,3 +1,25 @@
 <p>
   article-component works!
+  {{name}}
+  {{1+1}}
+  <button (click)="liked()">like it?</button>
 </p>
+
+<div *ngFor = "let c of city;let num = index">
+  <span>{{num}}-{{c}}</span>
+</div>
+
+<div [style.background-color]="'yellow'">
+  Uses fixed yellow background
+</div>
+<div [ngClass]="{'bordered-box': false}">...</div>
+<div [ngClass]="{'bordered-box': false,'name-color':true}">...</div>
+<span class="pre" ngNonBindable>
+ &larr; This is what {{ content }} rendered
+</span>
+<div>{{data?.userId}}</div>
+
+<!--{{data.userId}}-->
+<!--{{data.id}}-->
+<!--{{data.title}}-->
+<!--{{data.body}}-->
